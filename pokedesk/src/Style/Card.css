@@ -1,0 +1,12 @@
+#info {
+    position: absolute;
+    top: 60%;
+    left: 12%;
+    height: 150px;
+    width: 300px;
+    background: rgb(172, 248, 255);
+    color: white;
+    border: 8px solid;
+    box-sizing: border-box;
+    padding: 5%;
+}

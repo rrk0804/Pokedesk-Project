@@ -1,8 +1,36 @@
-#card {
-    height: 200px;
-    width: 300px;
+#device {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 450px;
+    width: 400px;
+    border: 10px inset;
     background: red;
   }
-img {
-  width:auto;
+
+button{
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  align-items: center;
+  background-color: #4d82ff;
+  height: 70px;
+  width: 70px;
+}
+
+#up {
+  position: absolute;
+  top: 7%;
+  left: 3%;
+  height:120px;
+  width: 145px;
+}
+
+#down {
+  position: absolute;
+  top: 28%;
+  left: 3%;
+  height:120px;
+  width: 145px;
 }

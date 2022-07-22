@@ -1,0 +1,11 @@
+#frame {
+    position: absolute;
+    top: 5%;
+    left: 44%;
+    height: 220px;
+    width: 170px;
+    background: white;
+    border: 8px solid white;
+    box-sizing: border-box;
+    padding: 5%;
+}
