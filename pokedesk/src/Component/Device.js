@@ -11,11 +11,12 @@ class Device extends React.Component {
         this.getAPIData = this.getAPIData.bind(this);
         this.state = {pokemon: {},
                       IsFetched: 0,
+                      position: 0
                       };
     }
 
     async getAPIData() {
-      const url = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=0";
+      const url = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0";
       const response = await fetch(url); 
       const responseJSON = await response.json();
       this.setState(
@@ -25,6 +26,7 @@ class Device extends React.Component {
         }
       );
     }
+    
 
     componentDidMount() {
        this.getAPIData();
@@ -33,12 +35,20 @@ class Device extends React.Component {
     render () {
       if (this.state.IsFetched)
       {
+        const addEvent = () => (this.setState({
+          position: this.state.position + 1
+        }));
+
+        const subEvent = () => (this.setState({
+          position: this.state.position - 1
+        }));
+
         return (
           <div id="device">
-            <Frame/>
-            <Card items={this.state.pokemon}></Card>
-            <img src={ArrowUp} alt="arrow up" id="up"></img>
-            <img src={ArrowDown} alt="arrow down" id="down"></img>
+            <Frame main={this.state.pokemon} pos={this.state.position}></Frame>
+            <Card items={this.state.pokemon} pos={this.state.position}></Card>
+            <img src={ArrowUp} alt="arrow up" id="up" onClick={addEvent}></img>
+            <img src={ArrowDown} alt="arrow down" id="down" onClick={subEvent}></img>
           </div>
         );
       }

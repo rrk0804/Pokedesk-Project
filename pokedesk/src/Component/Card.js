@@ -45,15 +45,13 @@ class Card extends React.Component {
     render () {
         // Type your code here...
         if (this.state.IsThere) {
-            console.log(this.props.items)
-            console.log(this.state.AllData)
             return (
                 <div id="info">
-                  Name: {this.state.Poke_names[0]}
+                  Name: {this.state.Poke_names[this.props.pos]}
                   <br></br>
-                  Height: {this.state.AllData[this.state.Poke_names[0]].height}
+                  Height: {this.state.AllData[this.state.Poke_names[this.props.pos]].height}
                   <br></br>
-                  Weight: {this.state.AllData[this.state.Poke_names[0]].weight}
+                  Weight: {this.state.AllData[this.state.Poke_names[this.props.pos]].weight}
                 </div>
               );
         }

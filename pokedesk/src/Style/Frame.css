@@ -1,5 +1,6 @@
 #frame {
     position: absolute;
+    text-align: center;
     top: 5%;
     left: 44%;
     height: 220px;
@@ -8,4 +9,23 @@
     border: 8px solid white;
     box-sizing: border-box;
     padding: 5%;
+}
+
+#front {
+    position: absolute;
+    top: -25%;
+    left: -27%;
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+}
+
+#back {
+    position: absolute;
+    float: left;
+    top: 20%;
+    left: -27%;
+    height: 200px;
+    width: auto;
+    object-fit: cover;
 }
