@@ -40,6 +40,7 @@ class Card extends React.Component {
                 Poke_names: names
             }
         )
+        console.log(this.state.AllData)
     }
 
     render () {

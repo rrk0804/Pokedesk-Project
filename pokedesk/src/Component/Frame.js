@@ -50,8 +50,7 @@ class Frame extends React.Component {
         // Return some JSX here...
         return (
           <div id="frame">
-            <img id="front" alt="Front-facing" src={this.state.AllData[this.state.Poke_names[this.props.pos]].sprites.front_default}></img>
-            <img id="back" alt="Back-facing" src={this.state.AllData[this.state.Poke_names[this.props.pos]].sprites.back_default}></img>
+            <img id="front" alt="Front-facing" src={this.state.AllData[this.state.Poke_names[this.props.pos]].sprites.other.dream_world.front_default}></img>
           </div>
         );
         }

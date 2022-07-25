@@ -11,12 +11,12 @@ class Device extends React.Component {
         this.getAPIData = this.getAPIData.bind(this);
         this.state = {pokemon: {},
                       IsFetched: 0,
-                      position: 0
+                      position: Math.floor(Math.random() * 300)
                       };
     }
 
     async getAPIData() {
-      const url = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0";
+      const url = "https://pokeapi.co/api/v2/pokemon?limit=300&offset=0";
       const response = await fetch(url); 
       const responseJSON = await response.json();
       this.setState(
@@ -36,11 +36,11 @@ class Device extends React.Component {
       if (this.state.IsFetched)
       {
         const addEvent = () => (this.setState({
-          position: this.state.position + 1
+          position: (this.state.position === 99 ? 0 : this.state.position + 1),
         }));
 
         const subEvent = () => (this.setState({
-          position: this.state.position - 1
+          position: (this.state.position === 0 ? 99 : this.state.position - 1),
         }));
 
         return (
