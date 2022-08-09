@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 #info {
     position: absolute;
+    font-family: 'Source Code Pro', monospace;
     top: 60%;
     left: 12%;
     height: 150px;
@@ -8,5 +10,5 @@
     color: black;
     border: 8px solid white;
     box-sizing: border-box;
-    padding: 5%;
+    padding: 7%;
 }

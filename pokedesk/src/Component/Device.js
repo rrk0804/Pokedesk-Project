@@ -11,7 +11,7 @@ class Device extends React.Component {
         this.getAPIData = this.getAPIData.bind(this);
         this.getAllData = this.getAllData.bind(this);
         this.state = {
-                      position: Math.floor(Math.random() * 1000),
+                      position: Math.floor(Math.random() * 100),
                       InitData: {},
                       AllData: {},
                       Height: "",
@@ -24,7 +24,7 @@ class Device extends React.Component {
     }
 
     async getAPIData() {
-      const url = "https://pokeapi.co/api/v2/pokemon?limit=1000&offset=0";
+      const url = "https://pokeapi.co/api/v2/pokemon?limit=100&offset=0";
       const response = await fetch(url); 
       const responseJSON = await response.json();
       this.setState(
@@ -73,10 +73,11 @@ class Device extends React.Component {
           position: (this.state.position === 0 ? 99 : this.state.position - 1),
           Name: this.state.Names[this.state.position]
         }));
+        console.log(this.state.AllData[this.state.Name])
         return (
           <div id="device">
-            <Frame link={this.state.AllData[this.state.Name].sprites.other.dream_world.front_default}></Frame>
-            <Card PokeName={this.state.Name} height={this.state.AllData[this.state.Name].height} weight={this.state.AllData[this.state.Name].height}></Card>
+            <Frame PokeName={this.state.Name} link={this.state.AllData[this.state.Name].sprites.other.dream_world.front_default}></Frame>
+            <Card PokeName={this.state.Name} height={this.state.AllData[this.state.Name].height} weight={this.state.AllData[this.state.Name].weight}></Card>
             <img src={ArrowUp} alt="arrow up" id="up" onClick={addEvent}></img>
             <img src={ArrowDown} alt="arrow down" id="down" onClick={subEvent}></img>
           </div>

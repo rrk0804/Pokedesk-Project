@@ -1,21 +1,36 @@
 #frame {
     position: absolute;
     text-align: center;
-    top: 5%;
+    top: 6%;
     left: 44%;
-    height: 250px;
-    width: 200px;
+    height: 230px;
+    width: 170px;
     background: white;
-    border: 8px solid white;
+    /*border: 8px solid black;*/
+    border: 10px solid #fff;
+    border-bottom: 45px solid #fff;
+    /*-webkit-box-shadow: 3px 3px 3px #777;
+    -moz-box-shadow: 3px 3px 3px #777;
+         box-shadow: 3px 3px 3px #777;*/
     box-sizing: border-box;
     padding: 5%;
 }
 
 #front {
     position: absolute;
-    top: 9%;
-    left: 9%;
-    height: 150px;
-    width: 150;
-    object-fit: cover;
+    top: 1.5%;
+    left: 2.7%;
+    height: 175px;
+    width: 93%;
+    object-fit: contain;
+    border: 1px solid black;
+    background-color: rgb(206, 204, 204);
+}
+#caption {
+    color:black;
+    font-size: large;
+    position: relative;
+    top: 122%;
+    margin-left: auto;
+    margin-left: auto;
 }
